@@ -1,18 +1,18 @@
-const { default: mongoose } = require("mongoose")
-const mangoose = require("mongoose")
+
+const { default: mongoose } = require("mongoose");
 
 const ToDoSchema = new mongoose.Schema({
     toDo : {
         type: String,
-        required: true
+        required: true,
     },
     title: {
         type: String,
-        required: true
+        required: true,
     },
     completed: {
            type: Boolean,
-       default: false
+       default: false,
       },
 })
 

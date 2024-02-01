@@ -16,10 +16,7 @@ useEffect(() => {
   axios
     .get(`${baseURL}/get`)
     .then((res,) => {
-      console.log(res.data), // Add this line
       setToDos(res.data)
-      
-      
     })
     .catch((err) => console.log(err));
 }, [updateUI]);
@@ -27,22 +24,21 @@ useEffect(() => {
 
 const saveToDo = () => {
   axios
-  .post(`${baseURL}/save`,{
-    title:title,
-    toDo:input,
-    })
-  .then(res =>{
-    console.log(res.data);
-    setUpdateUI((prevState) => !prevState)
-    setInput("")
-    setTitle("")
+  .post(`${baseURL}/save`, {
+    title: title.toString(),
+    toDo: input.toString(),
   })
-  .catch((err) => console.log(err));
+    .then((res) => {
+      console.log(res.data);
+      setUpdateUI((prevState) => !prevState);
+      setInput("");
+      setTitle("");
+    })
+    .catch((err) => console.log(err));
 };
 
-const handleTitleChange = (e) => {
-  setTitle(e.target.value);
-  };
+
+
   return (
     <main>
       <div className='container'>
@@ -52,7 +48,7 @@ const handleTitleChange = (e) => {
        
        <input
          value={title}
-         onChange={handleTitleChange}
+         onChange={(e) =>setTitle(e.target.value)}
         type='text'
         placeholder='Add Title...'
        />

@@ -33,8 +33,10 @@ const toggleCompleted = async (id) => {
     <div className='toDo'>
       <input type="checkbox" checked={completed} onChange={() => toggleCompleted(id)} />
        <div className={`toDo1 ${completed ? 'completed' : ''}`}>
-        <div>{title}</div>
-        <h2>{text}</h2>
+      
+        <div><button><h1>{title}</h1></button></div>
+        <b/>
+        <p>{text}</p>
        </div>
         <div className='icons'>
             <AiFillEdit className='icon'onClick={updateToDo}/>

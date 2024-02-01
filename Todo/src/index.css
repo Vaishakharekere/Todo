@@ -77,6 +77,11 @@ button:hover {
   align-items:center;
   
 }
+.toDo1 button{
+  align-items: center;
+  clear: both;
+  justify-content:space-around;
+}
 
 .icons {
   display: flex;
@@ -129,6 +134,7 @@ button:hover {
   justify-content: center;
   gap: 10px;
   padding-bottom: 30px;
+  color: aliceblue;
 }
 
 .popup__input_holder button {
@@ -137,9 +143,16 @@ button:hover {
 }
 
 .popup__input_holder input::placeholder {
-  color: #383838;
+  color: aliceblue;
 }
 
 .popup__input_holder button:hover {
   background-color: #c4c4c4;
+}
+
+p{
+  font-size: 1.5rem;
+  color:azure;
+  line-height: 2;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
