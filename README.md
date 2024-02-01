@@ -22,44 +22,45 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-   bash
-   git clone https://github.com/your-username/mern-todo-list.git
-   cd mern-todo-list
+   
+   git clone https://github.com/Vaishakharekere/todo.git
+   cd todo
    
 
 2. Install dependencies:
 
-   bash
-   # Install server dependencies
+   # Install backend dependencies
+   cd backend
    npm install
 
-   # Install client dependencies
-   cd client
+   # Install Todo dependencies
+   cd Todo
    npm install
    
 
-3. Configure MongoDB:
+4. Configure MongoDB:
 
    - Create a MongoDB database.
-   - Update the MongoDB connection string in server/config/db.js.
+   - Update the MongoDB connection string in backend/.env
 
-4. Run the application:
+5. Run the application:
 
    bash
    # Run the server
+   cd backend
    npm start
 
    # Run the client
-   cd client
+   cd Todo
    npm run dev
    
 
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Folder Structure
 
-- client: React frontend
-- server: Node.js backend
+- Todo: React frontend
+- backend: Node.js backend
 
 ## Technologies Used
 
